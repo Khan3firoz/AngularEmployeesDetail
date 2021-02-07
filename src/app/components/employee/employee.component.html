@@ -1,7 +1,7 @@
 <div class="container">
     <h1>Our Employe Details</h1>
     <div>
-        <table class="table">
+        <table class="table" border="1">
             <thead>
               <tr>
                 <th scope="col">Employee Id</th>
@@ -13,7 +13,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let employee of employee">
+              <tr *ngFor="let employee of employees">
                 <th scope="row">{{employee.empId}}</th>
                 <td>{{employee.fname}}</td>
                 <td>{{employee.lname}}</td>
@@ -22,6 +22,7 @@
                 <td>{{employee.email}}</td>
               </tr>
             </tbody>
-          </table>
+          </table><button (click)="addEmployeeInChildComp()">Add Employee from child components</button>
+
     </div>
 </div>
